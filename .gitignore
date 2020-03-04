@@ -1,0 +1,10 @@
+.idea
+.tmp
+.dist
+.DS_Store 
+jsconfig.json
+dist
+node_modules
+npm-debug.log
+.next
+coverage
