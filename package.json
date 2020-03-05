@@ -19,14 +19,16 @@
   },
   "homepage": "https://github.com/notgo/interview#readme",
   "dependencies": {
-    "koa": "^2.11.0",
-    "koa-bodyparser": "^4.2.1",
-    "koa-router": "^8.0.8",
-    "koa-json": "^2.0.2",
     "class-transformer": "^0.2.3",
     "class-validator": "^0.11.0",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-compose": "^4.1.0",
+    "koa-json": "^2.0.2",
+    "koa-router": "^8.0.8",
     "lodash": "^4.17.15",
-    "uuid": "^7.0.2"
+    "uuid": "^7.0.2",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "@types/koa": "^2.11.2",
@@ -35,6 +37,7 @@
     "@types/koa-router": "^7.4.0",
     "@types/lodash": "^4.14.149",
     "@types/uuid": "^7.0.0",
+    "@types/winston": "^2.4.4",
     "nodemon": "^2.0.2",
     "ts-node": "^8.6.2",
     "typescript": "^3.8.3"

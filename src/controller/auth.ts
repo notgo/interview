@@ -4,7 +4,7 @@ import { IAccount } from '../schema/account';
 import { ValidateUtil } from '../util/Classvalidator';
 import { AccessAccounts } from '../util/AccessAccounts';
 import AuthService from '../service/auth';
-import * as packageConfig from '../../package.json'
+import { logger } from '../plugin/Logger';
 
 class AuthController extends BaseController {
     authService: AuthService;
@@ -34,17 +34,13 @@ class AuthController extends BaseController {
                 ctx.body = this.loginInvalidError("登录失败");
             }
         } catch (err) {
-            console.info(err);
+            logger.trackException(err);
             return ctx.body = this.serverError(err.message)
         }
     }
 
     async getAccount(ctx: Koa.Context, next: Koa.Next) {
         ctx.body = this.success(ctx.accountInfo);
-    }
-
-    async getVersion(ctx: Koa.Context, next: Koa.Next) {
-        ctx.body = this.success('当前版本：' + (packageConfig as any).version);
     }
 
 }
