@@ -6,7 +6,8 @@
         "outDir": "./dist",
         "sourceMap": true,
         "declaration": true,
-        "experimentalDecorators":true
+        "experimentalDecorators": true,
+        "resolveJsonModule": true
     },
     "include": [
         "src/**/*"

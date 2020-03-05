@@ -4,6 +4,7 @@ import { IAccount } from '../schema/account';
 import { ValidateUtil } from '../util/Classvalidator';
 import { AccessAccounts } from '../util/AccessAccounts';
 import AuthService from '../service/auth';
+import * as packageConfig from '../../package.json'
 
 class AuthController extends BaseController {
     authService: AuthService;
@@ -43,8 +44,7 @@ class AuthController extends BaseController {
     }
 
     async getVersion(ctx: Koa.Context, next: Koa.Next) {
-        const query = ctx.request.query;
-        ctx.body = this.success("1.0.0");
+        ctx.body = this.success('当前版本：' + (packageConfig as any).version);
     }
 
 }
